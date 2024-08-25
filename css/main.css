@@ -4,6 +4,7 @@ html{
 
 .carousel-item img {
     width: 100%;
+    min-height: 165px;
     height: auto;
     object-fit: cover;
 }
@@ -11,6 +12,7 @@ html{
 .navbar {
     z-index: 1050;
 }
+
 .carousel-control-prev,
 .carousel-control-next {
     z-index: 1000;
@@ -23,12 +25,29 @@ html{
     object-position: center;
 }
 
+.fadeToRightClass {
+    opacity: 0;
+    animation: fade-to-right 1s forwards;
+}
+
+@keyframes fade-to-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-180px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
 @media (max-width: 768px) {
     html{
-        font-size: 12px;
+        font-size: 14px;
     }
     .carousel-caption h1{
-        font-size: 15px;
+        font-size: 16px;
     }
     .featurette img {
         width: 350px;
