@@ -1,21 +1,19 @@
-.carousel-item {
-   
-    position: absolute;
-    width: 100%;
-    height: 60%;
-}
-
-.carousel-item.active {
-    opacity: 1;
-    position: relative;
+html{
+    font-size: 16px;
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    object-position: center;
-    display: block;
+}
+
+.navbar {
+    z-index: 1050;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 1000;
 }
 
 .featurette img {
@@ -25,25 +23,8 @@
     object-position: center;
 }
 
-.google-map {
-    padding-bottom: 50%;
-    position: relative;
-}
-
-.google-map iframe {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-}
-
 @media (max-width: 768px) {
-    .navbar {
-        z-index: 1050;
-    }
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1000;
+    html{
+        font-size: 12px;
     }
 }
