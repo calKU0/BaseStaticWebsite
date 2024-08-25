@@ -27,4 +27,13 @@ html{
     html{
         font-size: 12px;
     }
+    .carousel-caption h1{
+        font-size: 15px;
+    }
+    .featurette img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        object-position: center;
+    }
 }
