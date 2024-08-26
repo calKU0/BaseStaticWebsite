@@ -12,6 +12,9 @@ html{
 .navbar {
     z-index: 1050;
 }
+.navbar img{
+    max-height: 50px;
+}
 
 .carousel-control-prev,
 .carousel-control-next {
