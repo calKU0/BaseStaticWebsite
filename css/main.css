@@ -61,7 +61,7 @@ html{
 }
 
 .nav div.logo a:hover {
-    color: #00E676;
+    color: #e2e600;
 }
 
 .nav div.main_list {
@@ -93,7 +93,7 @@ html{
 }
 
 .nav div.main_list ul li a:hover {
-    color: #00E676;
+    color: #e2e600;
 }
 
 .navTrigger {
@@ -113,6 +113,7 @@ html{
     z-index: 1000;
 }
 
+
 .featurette img {
     width: 500px;
     height: 500px;
@@ -125,6 +126,19 @@ html{
     animation: fade-to-right 1s forwards;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    .featurette img {
+    scale: .8; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry 30px ;
+    }
+}
+
+@keyframes fade-in {
+    to {scale: 1; opacity: 1;}
+}
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: 0;
@@ -133,7 +147,8 @@ html{
 
 @media screen and (max-width:768px) {
     .nav{
-        padding-top: 10px;
+        padding-top: 0px;
+        height: 71px;
     }
     .navTrigger {
         display: block;
@@ -153,26 +168,30 @@ html{
     .nav div.main_list ul {
         flex-direction: column;
         width: 100%;
-        height: 100vh;
+        height: auto;
         right: 0;
         left: 0;
         bottom: 0;
+        padding-left: 15px;
         background-color: #111;
-        /*same background color of navbar*/
-        background-position: center top;
     }
     .nav div.main_list ul li {
         width: 100%;
-        text-align: right;
+        text-align: left;
     }
     .nav div.main_list ul li a {
         text-align: center;
         width: 100%;
-        font-size: 2rem;
+        font-size:1.6rem;
         padding: 2px;
     }
     .nav div.media_button {
         display: block;
+    }
+
+    #navbar-container {
+        padding-left: 0 !important;
+        padding-right: 0px !important;
     }
 }
 
@@ -395,6 +414,9 @@ html{
     }
     .carousel-item img{
         min-height: 230px;
+    }
+    .carousel-indicators {
+        scale: 0.7;
     }
     .featurette img {
         width: 350px;
