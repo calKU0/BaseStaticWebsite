@@ -148,7 +148,7 @@ html{
 @media screen and (max-width:768px) {
     .nav{
         padding-top: 0px;
-        height: 71px;
+        line-height: 59px;
     }
     .navTrigger {
         display: block;

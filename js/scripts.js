@@ -7,7 +7,6 @@ $(document).ready(function() {
 });
 
 $('.navlinks').click(function () {
-    $('.navTrigger').removeClass('active');
-    $("#mainListDiv").removeClass("show_list");
-
+    $('.navTrigger').toggleClass('active');
+    $("#mainListDiv").slideToggle().toggleClass("show_list");
 });
