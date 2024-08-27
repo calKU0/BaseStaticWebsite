@@ -1,21 +1,24 @@
-.carousel-item {
-   
-    position: absolute;
-    width: 100%;
-    height: 60%;
-}
-
-.carousel-item.active {
-    opacity: 1;
-    position: relative;
+html{
+    font-size: 16px;
 }
 
 .carousel-item img {
     width: 100%;
-    height: 100%;
+    min-height: 165px;
+    height: auto;
     object-fit: cover;
-    object-position: center;
-    display: block;
+}
+
+.navbar {
+    z-index: 1050;
+}
+.navbar img{
+    max-height: 50px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 1000;
 }
 
 .featurette img {
@@ -25,25 +28,34 @@
     object-position: center;
 }
 
-.google-map {
-    padding-bottom: 50%;
-    position: relative;
+.fadeToRightClass {
+    opacity: 0;
+    animation: fade-to-right 1s forwards;
 }
 
-.google-map iframe {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
+@keyframes fade-to-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-180px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        z-index: 1050;
+    html{
+        font-size: 14px;
     }
-    .carousel-control-prev,
-    .carousel-control-next {
-        z-index: 1000;
+    .carousel-caption h1{
+        font-size: 16px;
+    }
+    .featurette img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        object-position: center;
     }
 }
