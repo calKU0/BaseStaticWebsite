@@ -137,10 +137,25 @@
                   <img src="resources/images/koparki.webp"class="img-fluid" alt="Koparki">
                 </div>
             </div>
-
         </div>
             
-                <!-- /END THE FEATURETTES -->
+        <!-- /END THE FEATURETTES -->
+        <hr>
+        <div class="logos">
+            <div class="logos-slide">
+              <img src="resources/producers/Bobcat.webp" />
+              <img src="resources/producers/Caterpillar.webp" />
+              <img src="resources/producers/CNHIndustrial.webp" />
+              <img src="resources/producers/Hanomag.webp" />
+              <img src="resources/producers/JCB.webp" />
+              <img src="resources/producers/JohnDeere.webp" />
+              <img src="resources/producers/Komatsu.webp" />
+              <img src="resources/producers/Manitou.webp" />
+              <img src="resources/producers/Sany.webp" />
+              <img src="resources/producers/Terex.webp" />
+            </div>
+        </div>
+        <hr>
         </div>
         <a href="sites/Dotacja.html"><img class="img-fluid pt-3" src="resources/images/fundusze-europejskie.webp"></a>
         </main>
@@ -161,6 +176,10 @@
                     $('.nav').removeClass('affix');
                 }
             });
+        </script>
+        <script>
+            var copy = document.querySelector(".logos-slide").cloneNode(true);
+            document.querySelector(".logos").appendChild(copy);
         </script>
         
     </body>
