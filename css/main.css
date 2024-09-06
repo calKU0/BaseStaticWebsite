@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-
 html{
-    font-size: 16px;
-    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
 }
 
 .carousel-item img {
@@ -127,16 +124,40 @@ html{
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .featurette img {
-    scale: .8; opacity: 0;
-    animation: fade-in linear forwards;
-    animation-timeline: view();
-    animation-range: entry 30px ;
+    .featurette-right img,
+    .featurette-left img {
+        scale: .8; opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry 30px;
     }
+    .featurette-right h2,
+    .featurette-right p{
+        animation: fadeInRight linear forwards;
+        animation-timeline: view();
+        animation-range: 0px 570px;
+    }
+    .featurette-left h2,
+    .featurette-left p{
+        animation: fadeInLeft linear forwards;
+        animation-timeline: view();
+        animation-range: 0px 570px;
+    }
+    
 }
 
 @keyframes fade-in {
     to {scale: 1; opacity: 1;}
+}
+
+@keyframes fadeInRight {
+    from {transform: translateX(20px); }
+    to { opacity: 1; scale: 1; }
+  }
+
+@keyframes fadeInLeft {
+    from {transform: translateX(-20px); }
+    to { opacity: 1; scale: 1; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -425,3 +446,50 @@ html{
         object-position: center;
     }
 }
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    overflow: hidden;
+    padding: 1em 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    max-height: 2.7em;
+    margin: 0 2em;
+  }
