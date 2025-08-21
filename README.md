@@ -1,5 +1,7 @@
 # Gamex Business Page
 
+> 💼 **Commercial Project** — part of a private or client-facing initiative.
+
 ## Overview
 
 A simple, static business website created for the company "Gamex". This project demonstrates proficiency in building responsive and visually appealing web pages using fundamental web technologies.
